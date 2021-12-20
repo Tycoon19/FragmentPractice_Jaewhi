@@ -7,5 +7,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<!--  그냥 class만 명시하고 앱을 돌리면 앱이 죽는다. 왜냐면 고유한 속성값을 지정해줘야 되기 때문에.
+      따라서 tag를 달아준다!!-->
+    <fragment
+        android:tag="firstFrag"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        class="com.example.fragmentpractice_jaewhi.fragments.FirstFragment"/>
 
 </LinearLayout>

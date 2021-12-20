@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fragmentpractice_jaewhi.R
+import kotlinx.android.synthetic.main.fragment_first.*
 
 class FirstFragment : Fragment() {
 
@@ -17,6 +18,17 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_first, container, false)
+    }
+//  동작에 관한 코드는 onActivityCreated 에서 짜야함.
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+//      fragment에서는 자동완성으로 선택해도 잘 동작된다.
+        changeTextBtn.setOnClickListener {
+
+            contentTxt.text = "안녕하세요."
+
+        }
+
     }
 
 }
